@@ -3,7 +3,7 @@
 
     <v-layout>
       <v-flex>
-        <div class="title">Featured Stories</div>
+        <div class="title">Featured Project</div>
       </v-flex>
       <v-flex text-right>
         <v-btn depressed class="text-none" color="grey lighten-4">

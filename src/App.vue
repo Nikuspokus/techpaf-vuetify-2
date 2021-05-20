@@ -1,7 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar flat app clipped-right color="white" clipped>
+    <v-app-bar flat app clipped-right color="green" clipped>
       <div class="d-flex align-center">
+        
         <v-card color="grey lighten-4" outlined width="300px" class="pa-2 ml-4">
           <v-layout>
             <v-flex>
@@ -57,19 +58,19 @@ export default {
   components: {
     ProfilePage,
     MainNav,
-    ProfileRightNav
+    ProfileRightNav,
   },
 
   data: () => ({
     drawer: true,
-    group: null
+    group: null,
     //
   }),
 
   watch: {
     group() {
       this.drawer = false;
-    }
-  }
+    },
+  },
 };
 </script>
