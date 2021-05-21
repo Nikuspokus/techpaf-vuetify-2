@@ -1,6 +1,8 @@
 <template>
   <v-container class="pa-10">
     <stories-section />
+    <v-divider color="#0197bf" class="my-14"></v-divider>
+
     <feed-section />
   </v-container>
 </template>
