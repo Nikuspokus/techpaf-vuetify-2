@@ -18,19 +18,21 @@
           </div>
         </v-layout>
 
-        <v-form>
+        <v-form class="mt-6">
           <v-container>
-            <v-row>
-              <v-col cols="12">
+            <v-row
+            >
+              <v-col>
                 <v-text-field
-                
-                  rounded
+                  type="text"
                   v-model="message"
+                  background-color="white"
+                  rounded
                   filled
+                  dense
+                  prepend-inner-icon="mdi-magnify"
                   clear-icon="mdi-close-circle"
                   clearable
-                  label="Message"
-                  type="text"
                   @click:append="toggleMarker"
                   @click:append-outer="sendMessage"
                   @click:prepend="changeIcon"
