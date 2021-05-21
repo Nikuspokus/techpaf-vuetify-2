@@ -8,18 +8,40 @@
           @click="drawer = !drawer"
         >
         </v-app-bar-nav-icon>
-          <v-layout>
-            <div>
-              <v-img
-                width="130px"
-                lazy-src="./assets/images/logo-text-techpaf-blanc.png"
-                src="./assets/images/logo-text-techpaf-blanc.png"
-              ></v-img>
-            </div>
-          </v-layout>
+        <v-layout>
+          <div>
+            <v-img
+              width="130px"
+              lazy-src="./assets/images/logo-text-techpaf-blanc.png"
+              src="./assets/images/logo-text-techpaf-blanc.png"
+            ></v-img>
+          </div>
+        </v-layout>
 
-      
-        <div class="d-flex align-center">
+        <v-form>
+          <v-container>
+            <v-row>
+              <v-col cols="12">
+                <v-text-field
+                
+                  rounded
+                  v-model="message"
+                  filled
+                  clear-icon="mdi-close-circle"
+                  clearable
+                  label="Message"
+                  type="text"
+                  @click:append="toggleMarker"
+                  @click:append-outer="sendMessage"
+                  @click:prepend="changeIcon"
+                  @click:clear="clearMessage"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-form>
+
+        <!-- <div class="d-flex align-center">
           <v-card
             color="grey lighten-4"
             outlined
@@ -37,10 +59,17 @@
               </v-flex>
             </v-layout>
           </v-card>
-        </div>
+        </div> -->
+
         <v-spacer></v-spacer>
 
-        <v-btn dark depressed rounded  color="#0c5085" class="text-none mr-5 BG-btn">
+        <v-btn
+          dark
+          depressed
+          rounded
+          color="#0c5085"
+          class="text-none mr-5 BG-btn"
+        >
           <span class="mr-2">
             <v-icon class="mr-2">mdi-plus</v-icon>Create New Post
           </span>
@@ -375,6 +404,21 @@ export default {
 
   data: () => ({
     drawer: false,
+    password: "Password",
+    show: false,
+    message: "Hey!",
+    marker: true,
+    iconIndex: 0,
+    icons: [
+      "mdi-emoticon",
+      "mdi-emoticon-cool",
+      "mdi-emoticon-dead",
+      "mdi-emoticon-excited",
+      "mdi-emoticon-happy",
+      "mdi-emoticon-neutral",
+      "mdi-emoticon-sad",
+      "mdi-emoticon-tongue",
+    ],
     items: [
       {
         title: "Fee Request",
@@ -392,6 +436,33 @@ export default {
   watch: {
     group() {
       this.drawer = false;
+    },
+  },
+
+  computed: {
+    icon() {
+      return this.icons[this.iconIndex];
+    },
+  },
+
+  methods: {
+    toggleMarker() {
+      this.marker = !this.marker;
+    },
+    sendMessage() {
+      this.resetIcon();
+      this.clearMessage();
+    },
+    clearMessage() {
+      this.message = "";
+    },
+    resetIcon() {
+      this.iconIndex = 0;
+    },
+    changeIcon() {
+      this.iconIndex === this.icons.length - 1
+        ? (this.iconIndex = 0)
+        : this.iconIndex++;
     },
   },
 };
