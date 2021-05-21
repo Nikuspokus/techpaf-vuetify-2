@@ -18,7 +18,6 @@
             </div>
           </v-layout>
 
-        <v-spacer></v-spacer>
       
         <div class="d-flex align-center">
           <v-card
@@ -41,12 +40,12 @@
         </div>
         <v-spacer></v-spacer>
 
-        <v-btn dark depressed color="#E7596F" class="text-none mr-5">
+        <v-btn dark depressed rounded  color="#0c5085" class="text-none mr-5 BG-btn">
           <span class="mr-2">
             <v-icon class="mr-2">mdi-plus</v-icon>Create New Post
           </span>
         </v-btn>
-        <v-divider vertical></v-divider>
+        <v-divider vertical color="white"></v-divider>
         <!-- <v-btn icon class="mr-2">
         <v-icon>mdi-email-outline</v-icon>
       </v-btn> -->
@@ -99,7 +98,7 @@
 
                 <div class="mt-4 title">Nicolas Marquillier</div>
                 <!-- <div class="mt-1 subtitle-2 grey--text">New York, NY</div> -->
-                <div class="mt-5">
+                <!-- <div class="mt-5">
                   <v-layout>
                     <v-flex>
                       <div class="subtitle-2">Post</div>
@@ -114,7 +113,7 @@
                       <div class="subtitle-2 grey--text">48m</div>
                     </v-flex>
                   </v-layout>
-                </div>
+                </div> -->
               </v-flex>
             </v-layout>
           </v-flex>
@@ -419,5 +418,9 @@ export default {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+}
+
+.BG-btn {
+  background-color: #ffffff;
 }
 </style>
