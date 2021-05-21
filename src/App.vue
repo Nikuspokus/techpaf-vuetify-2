@@ -408,7 +408,7 @@ export default {
     drawer: false,
     password: "Password",
     show: false,
-    message: "Hey!",
+    message: "",
     marker: true,
     iconIndex: 0,
     icons: [
