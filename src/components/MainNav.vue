@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer
     color="blue lighten-5"
-    class="pa-4"
+    class="pa-1"
     app
     fixed
     v-model="drawer"
@@ -118,6 +118,30 @@
         <template v-slot:activator>
           <v-list-item-title>Java</v-list-item-title>
         </template>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-lightbulb-on-outline</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Trucs & Astuces</v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-leaf</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>STRUTS</v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-leaf</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Spring</v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-account-group</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>CR Réunion</v-list-item-title>
+        </v-list-item>
         <v-list-item>
           <v-list-item-icon>
             <v-icon>mdi-lightbulb-on-outline</v-icon>
