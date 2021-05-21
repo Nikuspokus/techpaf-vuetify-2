@@ -1,6 +1,5 @@
 <template>
-  <div>
-
+  <div class="mt-">
     <v-layout>
       <v-flex>
         <div class="title">Featured Project</div>

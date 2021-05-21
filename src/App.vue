@@ -6,13 +6,50 @@
           class="mx-6"
           color="white"
           @click="drawer = !drawer"
-        ></v-app-bar-nav-icon>
+        >
+        </v-app-bar-nav-icon>
+          <v-layout>
+            <div>
+              <v-img
+                width="130px"
+                lazy-src="./assets/images/logo-text-techpaf-blanc.png"
+                src="./assets/images/logo-text-techpaf-blanc.png"
+              ></v-img>
+            </div>
+          </v-layout>
+
+        <v-spacer></v-spacer>
+      
         <div class="d-flex align-center">
-          <v-card
+          <v-form>
+    <v-container>
+      <v-row>
+        <v-col cols="12">
+          <v-text-field
+            v-model="message"
+            :append-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
+            :append-outer-icon="message ? 'mdi-send' : 'mdi-microphone'"
+            :prepend-icon="icon"
+            filled
+            clear-icon="mdi-close-circle"
+            clearable
+            label="Message"
+            type="text"
+            @click:append="toggleMarker"
+            @click:append-outer="sendMessage"
+            @click:prepend="changeIcon"
+            @click:clear="clearMessage"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-form>
+          <!-- <v-card
             color="grey lighten-4"
             outlined
             width="300px"
             class="pa-2 ml-4"
+            rounded
           >
             <v-layout>
               <v-flex>
@@ -23,10 +60,10 @@
                 <v-icon color="grey">mdi-microphone-outline</v-icon>
               </v-flex>
             </v-layout>
-          </v-card>
+          </v-card> -->
         </div>
-
         <v-spacer></v-spacer>
+
         <v-btn dark depressed color="#E7596F" class="text-none mr-5">
           <span class="mr-2">
             <v-icon class="mr-2">mdi-plus</v-icon>Create New Post
@@ -57,16 +94,17 @@
         fixed
         v-model="drawer"
       >
-        <v-layout class="pa-1">
+        <v-layout class="pa-1 mt-4">
           <div class="displayed">
             <v-img
-              width="130px"
-              lazy-src="./assets/images/logo-test-typo-2.png"
-              src="./assets/images/logo-test-typo-2.png"
+              width="50px"
+              height="50px"
+              lazy-src="./assets/images/logo-techpaf-noir.png"
+              src="./assets/images/logo-techpaf-noir.png"
             ></v-img>
           </div>
         </v-layout>
-        <v-layout class="mt-10">
+        <v-layout class="mt-6">
           <v-flex>
             <v-layout>
               <v-flex text-center>
@@ -74,17 +112,17 @@
                 <v-avatar class="outlined" size="80">
                   <v-avatar size="70">
                     <v-img
-                      lazy-src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80"
-                      src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80"
+                      lazy-src="./assets/images/photo_profil_nico_linkedin.jpg"
+                      src="./assets/images/photo_profil_nico_linkedin.jpg"
                     />
                   </v-avatar>
                 </v-avatar>
 
                 <!-- </v-card> -->
 
-                <div class="mt-4 title">Emma Watson</div>
-                <div class="mt-1 subtitle-2 grey--text">New York, NY</div>
-                <div class="mt-5">
+                <div class="mt-4 title">Nicolas Marquillier</div>
+                <!-- <div class="mt-1 subtitle-2 grey--text">New York, NY</div> -->
+                <!-- <div class="mt-5">
                   <v-layout>
                     <v-flex>
                       <div class="subtitle-2">Post</div>
@@ -99,7 +137,7 @@
                       <div class="subtitle-2 grey--text">48m</div>
                     </v-flex>
                   </v-layout>
-                </div>
+                </div> -->
               </v-flex>
             </v-layout>
           </v-flex>
@@ -357,26 +395,63 @@ export default {
 
   components: {
     ProfilePage,
-    // MainNav,
-    // ProfileRightNav,
   },
 
   data: () => ({
     drawer: false,
-    // group: null,
-    items: [
-        {
-          title: "Fee Request",
-          icon: "mdi-cash-multiple",
-          method: () => this.feeRequest(),
-        },
-        {
-          title: "Profile",
-          icon: "mdi-account-badge-horizontal",
-          method: () => this.profile(),
-        },
+    password: 'Password',
+      show: false,
+      message: 'Hey!',
+      marker: true,
+      iconIndex: 0,
+      icons: [
+        'mdi-emoticon',
+        'mdi-emoticon-cool',
+        'mdi-emoticon-dead',
+        'mdi-emoticon-excited',
+        'mdi-emoticon-happy',
+        'mdi-emoticon-neutral',
+        'mdi-emoticon-sad',
+        'mdi-emoticon-tongue',
       ],
-    //
+      computed: {
+      icon () {
+        return this.icons[this.iconIndex]
+      },
+    },
+
+    methods: {
+      toggleMarker () {
+        this.marker = !this.marker
+      },
+      sendMessage () {
+        this.resetIcon()
+        this.clearMessage()
+      },
+      clearMessage () {
+        this.message = ''
+      },
+      resetIcon () {
+        this.iconIndex = 0
+      },
+      changeIcon () {
+        this.iconIndex === this.icons.length - 1
+          ? this.iconIndex = 0
+          : this.iconIndex++
+      },
+    },
+    items: [
+      {
+        title: "Fee Request",
+        icon: "mdi-cash-multiple",
+        method: () => this.feeRequest(),
+      },
+      {
+        title: "Profile",
+        icon: "mdi-account-badge-horizontal",
+        method: () => this.profile(),
+      },
+    ],
   }),
 
   watch: {
@@ -400,5 +475,13 @@ export default {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.v-avatar.outlined {
+  border: 2px solid #0197bf;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 </style>
