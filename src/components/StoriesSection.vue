@@ -68,52 +68,29 @@
         </div> -->
         <v-divider vertical color="0197bf"></v-divider>
         <div class="col-6">
-          <v-row no-gutters style="background-color: green">
-            <v-card
-              elevation="12"
-              height="60%"
-              width="60%"
-              color="#1256FF"
-              class="mx-auto"
-            >
-              <v-img src="../assets/images/gptw.jpg"></v-img>
-            </v-card>
-
-            <h2>
-              <strong><em>1. </em>Best Workplace 2021</strong>
-            </h2>
-            <v-spacer></v-spacer>
-            <p class="overFlow">
-              Il fait bon travailler chez SII et nous sommes cette année la
-              meilleure société labellisée parmi les plus grandes entreprises
-              auditées. Le bien-être et l’épanouissement au travail sont au cœur
-              de notre stratégie d’entreprise et de nos préoccupations. s
-            </p>
-          </v-row>
-          <v-container style="background-color: yellow">
+          <v-container style="background-color: blue">
             <div class="row">
               <div class="col-4">
                 <v-card
-              elevation="12"
-              height="60%"
-              width="60%"
-              color="#1256FF"
-              class="mx-auto"
-            >
-              <v-img src="../assets/images/gptw.jpg"></v-img>
-            </v-card>
+                  elevation="12"
+                  color="#1256FF"
+                  class="mx-auto"
+                >
+                  <v-img src="../assets/images/gptw.jpg"></v-img>
+                </v-card>
               </div>
               <div class="col-8">
                 <h2>
-              <strong><em>1. </em>Best Workplace 2021</strong>
-            </h2>
-            <v-spacer></v-spacer>
-            <p class="overFlow">
-              Il fait bon travailler chez SII et nous sommes cette année la
-              meilleure société labellisée parmi les plus grandes entreprises
-              auditées. Le bien-être et l’épanouissement au travail sont au cœur
-              de notre stratégie d’entreprise et de nos préoccupations. s
-            </p>
+                  <strong><em>1. </em>Best Workplace 2021</strong>
+                </h2>
+                <v-spacer></v-spacer>
+                <p class="overFlow">
+                  Il fait bon travailler chez SII et nous sommes cette année la
+                  meilleure société labellisée parmi les plus grandes
+                  entreprises auditées. Le bien-être et l’épanouissement au
+                  travail sont au cœur de notre stratégie d’entreprise et de nos
+                  préoccupations. s
+                </p>
               </div>
             </div>
           </v-container>
