@@ -33,7 +33,7 @@
 
             <!-- </v-card> -->
 
-            <div class="mt-4 title">Emma Watson</div>
+            <div class="mt-4 title list-item">Emma Watson</div>
             <div class="mt-1 subtitle-2 grey--text">New York, NY</div>
             <div class="mt-5">
               <v-layout>
@@ -268,24 +268,24 @@
           <v-list-item-icon>
             <v-icon>mdi-account-group</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>CR Réunion</v-list-item-title>
+          <v-list-item-title class="list-item">CR Réunion</v-list-item-title>
         </v-list-item>
       </v-list-group>
       <v-list-group prepend-icon="mdi-information-outline">
         <template v-slot:activator>
-          <v-list-item-title>Infos Pratiques</v-list-item-title>
+          <v-list-item-title class="list-item">Infos Pratiques</v-list-item-title>
         </template>
         <v-list-item>
           <v-list-item-icon>
             <v-icon>mdi-lightbulb-on-outline</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>Trucs & Astuces</v-list-item-title>
+          <v-list-item-title class="list-item">Trucs & Astuces</v-list-item-title>
         </v-list-item>
         <v-list-item>
           <v-list-item-icon>
             <v-icon>mdi-account-group</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>CR Réunion</v-list-item-title>
+          <v-list-item-title class="list-item">CR Réunion</v-list-item-title>
         </v-list-item>
       </v-list-group>
     </v-list>
@@ -322,6 +322,10 @@ export default {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+}
+
+.list-item {
+  color: white;
 }
 
 .displayed {

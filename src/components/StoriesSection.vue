@@ -23,7 +23,7 @@
             </div>
           </v-card>
           <v-layout column class="mt-8 ">
-            <h2 class=""><strong>Best Workplacexxxxx 2021</strong></h2>
+            <h2 class=""><strong>Best Workplacexxxtttxx 2021</strong></h2>
             <v-spacer></v-spacer>
             <div class="" style=" width: 550px">
               Il fait bon travailler chez SII et nous sommes cette année la
@@ -67,10 +67,12 @@
           </v-layout>
         </div> -->
         <v-divider vertical color="0197bf"></v-divider>
-        <div class="col-6">
-          <v-container style="background-color: blue">
-            <div class="row">
-              <div class="col-4">
+
+        <div class="col-6 mx-auto">
+          <!-- <v-container style="background-color: blue" class="mx-auto"> -->
+          <v-container class="mx-auto">
+            <div class="row ">
+              <div class="col-4 mx-auto">
                 <v-card
                   elevation="12"
                   color="#1256FF"
@@ -84,17 +86,71 @@
                   <strong><em>1. </em>Best Workplace 2021</strong>
                 </h2>
                 <v-spacer></v-spacer>
-                <p class="overFlow">
+                <p class="overFlow" >
                   Il fait bon travailler chez SII et nous sommes cette année la
                   meilleure société labellisée parmi les plus grandes
                   entreprises auditées. Le bien-être et l’épanouissement au
                   travail sont au cœur de notre stratégie d’entreprise et de nos
-                  préoccupations. s
+                  préoccupations.
                 </p>
               </div>
             </div>
           </v-container>
-          <v-container class="grey lighten-5">
+          <!-- <v-container style="background-color: blue" class="mx-auto"> -->
+          <v-container class="mx-auto">
+            <div class="row ">
+              <div class="col-4 mx-auto">
+                <v-card
+                  elevation="12"
+                  color="#1256FF"
+                  class="mx-auto"
+                >
+                  <v-img src="../assets/images/gptw.jpg"></v-img>
+                </v-card>
+              </div>
+              <div class="col-8">
+                <h2>
+                  <strong><em>1. </em>Best Workplace 2021</strong>
+                </h2>
+                <v-spacer></v-spacer>
+                <p class="overFlow" >
+                  Il fait bon travailler chez SII et nous sommes cette année la
+                  meilleure société labellisée parmi les plus grandes
+                  entreprises auditées. Le bien-être et l’épanouissement au
+                  travail sont au cœur de notre stratégie d’entreprise et de nos
+                  préoccupations.
+                </p>
+              </div>
+            </div>
+          </v-container>
+          <!-- <v-container style="background-color: blue" class="mx-auto"> -->
+          <v-container class="mx-auto">
+            <div class="row ">
+              <div class="col-4 mx-auto">
+                <v-card
+                  elevation="12"
+                  color="#1256FF"
+                  class="mx-auto"
+                >
+                  <v-img src="../assets/images/gptw.jpg"></v-img>
+                </v-card>
+              </div>
+              <div class="col-8">
+                <h2>
+                  <strong><em>1. </em>Best Workplace 2021</strong>
+                </h2>
+                <v-spacer></v-spacer>
+                <p class="overFlow" >
+                  Il fait bon travailler chez SII et nous sommes cette année la
+                  meilleure société labellisée parmi les plus grandes
+                  entreprises auditées. Le bien-être et l’épanouissement au
+                  travail sont au cœur de notre stratégie d’entreprise et de nos
+                  préoccupations.
+                </p>
+              </div>
+            </div>
+          </v-container>
+          <!-- <v-container class="grey lighten-5">
             <v-row no-gutters style="display: inline-blocks">
               <v-col cols="6" md="4">
                 <v-card
@@ -117,12 +173,13 @@
                   meilleure société labellisée parmi les plus grandes
                   entreprises auditées. Le bien-être et l’épanouissement au
                   travail sont au cœur de notre stratégie d’entreprise et de nos
-                  préoccupations. s
+                  préoccupations.
                 </p>
               </v-col>
             </v-row>
-          </v-container>
-          <v-container class="grey lighten-5">
+          </v-container> -->
+          <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+          <!-- <v-container class="grey lighten-5">
             <v-row no-gutters style="display: inline-blocks">
               <v-col cols="6" md="4">
                 <v-card
@@ -145,11 +202,11 @@
                   meilleure société labellisée parmi les plus grandes
                   entreprises auditées. Le bien-être et l’épanouissement au
                   travail sont au cœur de notre stratégie d’entreprise et de nos
-                  préoccupations. s
+                  préoccupations.
                 </p>
               </v-col>
             </v-row>
-          </v-container>
+          </v-container> -->
         </div>
       </v-layout>
 
@@ -171,6 +228,14 @@ export default {};
 }
 body {
   background-color: #ddd;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 12px;
 }
 .div-categoryContainer {
   box-sizing: border-box;
