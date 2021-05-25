@@ -3,7 +3,9 @@
     color="blue lighten-5"
     class="pa-1"
     app
-    fixed
+    mini-variant
+    mini-variant-width="200px"
+    dense
     v-model="drawer"
   >
     <v-layout class="pa-1">

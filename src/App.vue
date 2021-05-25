@@ -95,8 +95,7 @@
 
       <!-- <profile-right-nav /> -->
       <v-navigation-drawer
-        color="blue lighten-5"
-        class="pa-1"
+        class="pa-1 BG-drawer"
         app
         fixed
         v-model="drawer"
@@ -475,6 +474,14 @@ export default {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.BG-drawer {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(0, 212, 255, 1) 100%
   );
