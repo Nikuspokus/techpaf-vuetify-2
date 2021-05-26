@@ -70,7 +70,7 @@
 
         <div class="col-6 mx-auto">
           <!-- <v-container style="background-color: blue" class="mx-auto"> -->
-          <v-container class="mx-auto">
+          <!-- <v-container class="mx-auto">
             <div class="row ">
               <div class="col-4 mx-auto">
                 <v-card elevation="12" color="#1256FF" class="mx-auto">
@@ -91,9 +91,9 @@
                 </p>
               </div>
             </div>
-          </v-container>
+          </v-container> -->
           <!-- <v-container style="background-color: blue" class="mx-auto"> -->
-          <v-container class="mx-auto">
+          <!-- <v-container class="mx-auto">
             <div class="row ">
               <div class="col-4 mx-auto">
                 <v-card elevation="12" color="#1256FF" class="mx-auto">
@@ -114,8 +114,8 @@
                 </p>
               </div>
             </div>
-          </v-container>
-          <v-container class="mx-auto">
+          </v-container> -->
+          <!-- <v-container class="mx-auto">
             <div class="row ">
               <div class="col-4 mx-auto">
                 <v-card elevation="12" color="#1256FF" class="mx-auto">
@@ -136,7 +136,7 @@
                 </p>
               </div>
             </div>
-          </v-container>
+          </v-container> -->
           <pagination />
         </div>
       </v-layout>

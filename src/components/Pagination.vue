@@ -46,8 +46,10 @@
       <template v-slot:default="props">
         <v-row  v-for="item in props.items" :key="item.titre">
           <div class="col-4 mx-auto">
-                <v-card elevation="12" color="#1256FF" class="mx-auto">
-                  <v-img src="../assets/images/gptw.jpg"></v-img>
+                <v-card elevation="12" class="mx-auto">
+                  {{ item.image }}
+                  <v-img>{{ item.url }}</v-img>
+                  <!-- <v-img src="../assets/images/gptw.jpg"/> -->
                 </v-card>
               </div>
               <div class="col-8">
@@ -58,7 +60,10 @@
                 <p class="overFlow">
                   {{item.text}}
                 </p>
-                <v-btn rounded right>sdfsdf</v-btn>
+                <v-row>
+                  <v-spacer></v-spacer>
+                <v-btn rounded right class="mt-2">sdfsdf</v-btn>
+                </v-row>
               </div>
           
         </v-row>
@@ -94,20 +99,21 @@ export default {
       filter: {},
       sortDesc: false,
       page: 1,
-      itemsPerPage: 4,
+      itemsPerPage: 3,
       sortBy: "titre",
-      keys: ["Titre", "Image", "Text", "Link"],
+      keys: ["Titre", "url", "Text", "Link"],
       items: [
         {
-          titre: "1. Best Workplace 2021",
-          image: "../assets/images/gptw.jpg",
+          titre: "1. Best Wopmopmorkplace 2021",
+          // src: '@assets/images/gptw.jpg',
+          url: "../assets/images/gptw.jpg",
           text:
             "Il fait bon travailler chez SII et nous sommes cette année la meilleure société labellisée parmi les plus grandes entreprises auditées. Le bien-être et l’épanouissement au travail sont au cœur de notre stratégie d’entreprise et de nos préoccupations.",
           link: "www.google.fr",
         },
         {
           titre: "2. Best Workplace 2021",
-          image: "../assets/images/gptw.jpg",
+          image: "../../assets/images/gptw.jpg",
           text:
             "Il fait bon travailler chez SII et nous sommes cette année la meilleure société labellisée parmi les plus grandes entreprises auditées. Le bien-être et l’épanouissement au travail sont au cœur de notre stratégie d’entreprise et de nos préoccupations.",
           link: "www.google.fr",
