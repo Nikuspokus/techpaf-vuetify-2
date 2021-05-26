@@ -47,9 +47,8 @@
         <v-row  v-for="item in props.items" :key="item.titre">
           <div class="col-4 mx-auto">
                 <v-card elevation="12" class="mx-auto">
-                  {{ item.image }}
-                  <v-img>{{ item.url }}</v-img>
-                  <!-- <v-img src="../assets/images/gptw.jpg"/> -->
+                   <!-- <img :src="item.url" alt="No Image" title="Order Now" /> -->
+                  <v-img src="../assets/images/gptw.jpg"/>
                 </v-card>
               </div>
               <div class="col-8">
@@ -106,7 +105,7 @@ export default {
         {
           titre: "1. Best Wopmopmorkplace 2021",
           // src: '@assets/images/gptw.jpg',
-          url: "../assets/images/gptw.jpg",
+          url: "../assets/gptw.jpg",
           text:
             "Il fait bon travailler chez SII et nous sommes cette année la meilleure société labellisée parmi les plus grandes entreprises auditées. Le bien-être et l’épanouissement au travail sont au cœur de notre stratégie d’entreprise et de nos préoccupations.",
           link: "www.google.fr",

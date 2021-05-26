@@ -12,9 +12,9 @@
         </v-flex>
       </v-layout>
       <v-layout class="mt-7">
-        <div class="col-6">
-          <v-card elevation="12" height="260" width="680" color="#1256FF">
-            <div>
+        <div class="col-6 mx-auto mr-3">
+          <v-card elevation="12" height="260" width="680" color="#1256FF" class=" mx-auto">
+            <div >
               <v-img
                 height="260"
                 src="../assets/images/gptw.jpg"
@@ -23,9 +23,10 @@
             </div>
           </v-card>
           <v-layout column class="mt-8 ">
-            <h2 class=""><strong>Best Workplacexxxtttxx 2021</strong></h2>
-            <v-spacer></v-spacer>
-            <div class="" style=" width: 550px">
+            <h2 class=" mx-auto"><strong>Best Workplacexxxtttxx 2021</strong></h2>
+            <br>
+            <div class=" m-auto">
+              <p>
               Il fait bon travailler chez SII et nous sommes cette année la
               meilleure société labellisée parmi les plus grandes entreprises
               auditées. Le bien-être et l’épanouissement au travail sont au cœur
@@ -33,6 +34,7 @@
               étions déjà troisièmes l’année passée et c’est la quatrième année
               consécutive que SII obtient ce label. Cette première place vient
               donc récompenser la cohérence et la durabilité de notre démarche
+              </p>
             </div>
           </v-layout>
         </div>
