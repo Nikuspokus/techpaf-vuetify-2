@@ -73,11 +73,7 @@
           <v-container class="mx-auto">
             <div class="row ">
               <div class="col-4 mx-auto">
-                <v-card
-                  elevation="12"
-                  color="#1256FF"
-                  class="mx-auto"
-                >
+                <v-card elevation="12" color="#1256FF" class="mx-auto">
                   <v-img src="../assets/images/gptw.jpg"></v-img>
                 </v-card>
               </div>
@@ -86,7 +82,7 @@
                   <strong><em>1. </em>Best Workplace 2021</strong>
                 </h2>
                 <v-spacer></v-spacer>
-                <p class="overFlow" >
+                <p class="overFlow">
                   Il fait bon travailler chez SII et nous sommes cette année la
                   meilleure société labellisée parmi les plus grandes
                   entreprises auditées. Le bien-être et l’épanouissement au
@@ -100,11 +96,7 @@
           <v-container class="mx-auto">
             <div class="row ">
               <div class="col-4 mx-auto">
-                <v-card
-                  elevation="12"
-                  color="#1256FF"
-                  class="mx-auto"
-                >
+                <v-card elevation="12" color="#1256FF" class="mx-auto">
                   <v-img src="../assets/images/gptw.jpg"></v-img>
                 </v-card>
               </div>
@@ -113,7 +105,7 @@
                   <strong><em>1. </em>Best Workplace 2021</strong>
                 </h2>
                 <v-spacer></v-spacer>
-                <p class="overFlow" >
+                <p class="overFlow">
                   Il fait bon travailler chez SII et nous sommes cette année la
                   meilleure société labellisée parmi les plus grandes
                   entreprises auditées. Le bien-être et l’épanouissement au
@@ -123,15 +115,10 @@
               </div>
             </div>
           </v-container>
-          <!-- <v-container style="background-color: blue" class="mx-auto"> -->
           <v-container class="mx-auto">
             <div class="row ">
               <div class="col-4 mx-auto">
-                <v-card
-                  elevation="12"
-                  color="#1256FF"
-                  class="mx-auto"
-                >
+                <v-card elevation="12" color="#1256FF" class="mx-auto">
                   <v-img src="../assets/images/gptw.jpg"></v-img>
                 </v-card>
               </div>
@@ -140,7 +127,7 @@
                   <strong><em>1. </em>Best Workplace 2021</strong>
                 </h2>
                 <v-spacer></v-spacer>
-                <p class="overFlow" >
+                <p class="overFlow">
                   Il fait bon travailler chez SII et nous sommes cette année la
                   meilleure société labellisée parmi les plus grandes
                   entreprises auditées. Le bien-être et l’épanouissement au
@@ -150,63 +137,7 @@
               </div>
             </div>
           </v-container>
-          <!-- <v-container class="grey lighten-5">
-            <v-row no-gutters style="display: inline-blocks">
-              <v-col cols="6" md="4">
-                <v-card
-                  elevation="12"
-                  height="60%"
-                  width="60%"
-                  color="#1256FF"
-                  class="mr-4"
-                >
-                  <v-img src="../assets/images/gptw.jpg"></v-img>
-                </v-card>
-              </v-col>
-              <v-col cols="12" sm="6" md="5">
-                <h2>
-                  <strong><em>1. </em>Best Workplace 2021</strong>
-                </h2>
-                <v-spacer></v-spacer>
-                <p class="overFlow">
-                  Il fait bon travailler chez SII et nous sommes cette année la
-                  meilleure société labellisée parmi les plus grandes
-                  entreprises auditées. Le bien-être et l’épanouissement au
-                  travail sont au cœur de notre stratégie d’entreprise et de nos
-                  préoccupations.
-                </p>
-              </v-col>
-            </v-row>
-          </v-container> -->
-          <!-- //////////////////////////////////////////////////////////////////////////////////// -->
-          <!-- <v-container class="grey lighten-5">
-            <v-row no-gutters style="display: inline-blocks">
-              <v-col cols="6" md="4">
-                <v-card
-                  elevation="12"
-                  height="60%"
-                  width="60%"
-                  color="#1256FF"
-                  class="mr-4"
-                >
-                  <v-img src="../assets/images/gptw.jpg"></v-img>
-                </v-card>
-              </v-col>
-              <v-col cols="12" sm="6" md="5">
-                <h2>
-                  <strong><em>1. </em>Best Workplace 2021</strong>
-                </h2>
-                <v-spacer></v-spacer>
-                <p class="overFlow">
-                  Il fait bon travailler chez SII et nous sommes cette année la
-                  meilleure société labellisée parmi les plus grandes
-                  entreprises auditées. Le bien-être et l’épanouissement au
-                  travail sont au cœur de notre stratégie d’entreprise et de nos
-                  préoccupations.
-                </p>
-              </v-col>
-            </v-row>
-          </v-container> -->
+          <pagination />
         </div>
       </v-layout>
 
@@ -217,7 +148,14 @@
 </template>
 
 <script>
-export default {};
+import Pagination from "./Pagination.vue";
+export default {
+  name: "StoriesSection",
+
+  components: {
+    Pagination,
+  },
+};
 </script>
 
 <style>
