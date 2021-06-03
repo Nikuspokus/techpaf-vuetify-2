@@ -161,8 +161,7 @@ export default {
 </script>
 
 <style>
-.container {
-}
+
 .returnLine {
   white-space: pre;
 }
