@@ -2,7 +2,7 @@
     <v-cols>
       <v-layout row>
         <v-flex>
-          <div class="title">Featured Project</div>
+          <div>Featured Project</div>
         </v-flex>
         <v-flex text-right>
           <v-btn depressed class="text-none" color="grey lighten-4">

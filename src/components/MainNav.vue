@@ -56,7 +56,7 @@
       </v-flex>
     </v-layout>
     <v-list nav dense class="mt-10">
-      <v-list-item-group v-model="group" active-class="#E7596F--text">
+      <v-list-item-group active-class="#E7596F--text">
         <v-list-group prepend-icon="mdi-language-javascript">
           <template v-slot:activator>
             <v-list-item-title>JS</v-list-item-title>
@@ -333,4 +333,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
+
+v-list-group__icon--append .v-icon {
+  color: green;
+  }
+
 </style>

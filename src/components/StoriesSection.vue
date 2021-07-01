@@ -23,7 +23,7 @@
             </div>
           </v-card>
           <v-layout column class="mt-8 ">
-            <h2 class=" mx-auto"><strong>Best Workplacexxxtttxx 2021</strong></h2>
+            <h2 class=" mx-auto"><strong>Best Workplace 2021</strong></h2>
             <br>
             <div class=" m-auto">
               <p>
