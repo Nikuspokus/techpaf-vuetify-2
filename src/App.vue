@@ -39,9 +39,10 @@
           </v-container>
         </v-form>
         <v-spacer></v-spacer>
-        <v-flex class="mt-4 mb-3">
+        <div class="mr-5">
+
           <Popup/>
-        </v-flex>
+        </div>
 
         <!-- <v-btn
           dark
