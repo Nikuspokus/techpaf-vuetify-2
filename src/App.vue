@@ -32,15 +32,18 @@
                   prepend-inner-icon="mdi-magnify"
                   clear-icon="mdi-close-circle"
                   clearable
-                  class="hidden-sm-and-down"    
+                  class="hidden-sm-and-down"
                 ></v-text-field>
               </v-col>
             </v-row>
           </v-container>
         </v-form>
         <v-spacer></v-spacer>
+        <v-flex class="mt-4 mb-3">
+          <Popup/>
+        </v-flex>
 
-        <v-btn
+        <!-- <v-btn
           dark
           depressed
           rounded
@@ -50,13 +53,13 @@
           <span class="mr-2">
             <v-icon class="mr-2">mdi-plus</v-icon>Create New Post
           </span>
-        </v-btn>
+        </v-btn> -->
         <v-divider vertical color="white"></v-divider>
         <v-btn icon class="mx-5" color="white">
           <v-icon>mdi-bell-outline</v-icon>
         </v-btn>
       </v-app-bar>
-      <v-navigation-drawer class="pa-1 BG-drawer"  app fixed v-model="drawer">
+      <v-navigation-drawer class="pa-1 BG-drawer" app fixed v-model="drawer">
         <v-layout class="pa-1 mt-4">
           <div class="displayed">
             <v-img
@@ -82,8 +85,9 @@
 
                 <!-- </v-card> -->
 
-                <div class="mt-4 title" style="color: white">Nicolas Marquillier</div>
-                
+                <div class="mt-4 title" style="color: white">
+                  Nicolas Marquillier
+                </div>
               </v-flex>
             </v-layout>
           </v-flex>
@@ -92,13 +96,17 @@
           <v-list-item-group>
             <v-list-group prepend-icon="mdi-language-javascript">
               <template v-slot:activator>
-                <v-list-item-title class="#C2CDD8--text item-menu" >JS</v-list-item-title>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >JS</v-list-item-title
+                >
               </template>
               <v-list-item>
                 <v-list-item-icon prepend-icon="mdi-language-javascript">
                   <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title class="item-menu">Trucs & Astuces</v-list-item-title>
+                <v-list-item-title class="item-menu"
+                  >Trucs & Astuces</v-list-item-title
+                >
               </v-list-item>
               <v-list-item>
                 <v-list-item-icon>
@@ -108,7 +116,9 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon class="item-menu" style="color: white">mdi-jquery</v-icon>
+                  <v-icon class="item-menu" style="color: white"
+                    >mdi-jquery</v-icon
+                  >
                 </v-list-item-icon>
                 <v-list-item-title class="item-menu">JQuery</v-list-item-title>
               </v-list-item>
@@ -128,233 +138,265 @@
                 <v-list-item-icon>
                   <v-icon style="color: white">mdi-account-group</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title class="item-menu">CR Réunion</v-list-item-title>
+                <v-list-item-title class="item-menu"
+                  >CR Réunion</v-list-item-title
+                >
               </v-list-item>
             </v-list-group>
           </v-list-item-group>
           <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-language-php">
-            <template v-slot:activator>
-              <v-list-item-title class="item-menu">PHP</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
+            <v-list-group prepend-icon="mdi-language-php">
+              <template v-slot:activator>
+                <v-list-item-title class="item-menu">PHP</v-list-item-title>
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >Trucs & Astuces</v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >CR Réunion</v-list-item-title
+                >
+              </v-list-item>
+            </v-list-group>
           </v-list-item-group>
-    
+
           <v-list-item-group active-class="#E7596F--text" style="color: white">
-          <v-list-group prepend-icon="mdi-language-java">
-            <template v-slot:activator>
-              <v-list-item-title class="item-menu">Java</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-leaf</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">STRUTS</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-leaf</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">Spring</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">CR Réunion</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-leaf</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">STRUTS</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-leaf</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">Spring</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: white">mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
+            <v-list-group prepend-icon="mdi-language-java">
+              <template v-slot:activator>
+                <v-list-item-title class="item-menu">Java</v-list-item-title>
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >Trucs & Astuces</v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-leaf</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu">STRUTS</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-leaf</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu">Spring</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >CR Réunion</v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >Trucs & Astuces</v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-leaf</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu">STRUTS</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-leaf</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu">Spring</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: white">mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >CR Réunion</v-list-item-title
+                >
+              </v-list-item>
+            </v-list-group>
           </v-list-item-group>
           <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-dot-net">
-            <template v-slot:activator>
-              <v-list-item-title class="#C2CDD8--text item-menu">.Net</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title class="item-menu">CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
+            <v-list-group prepend-icon="mdi-dot-net">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >.Net</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >Trucs & Astuces</v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="item-menu"
+                  >CR Réunion</v-list-item-title
+                >
+              </v-list-item>
+            </v-list-group>
           </v-list-item-group>
           <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-head-cog">
-            <template v-slot:activator>
-              <v-list-item-title class="#C2CDD8--text item-menu">IA / ML</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-          </v-list-item-group>
-          <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-dot-net">
-            <template v-slot:activator>
-              <v-list-item-title class="#C2CDD8--text item-menu">YPO</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-          </v-list-item-group>
-          <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-leaf">
-            <template v-slot:activator>
-              <v-list-item-title class="#C2CDD8--text item-menu">Green IT</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-          </v-list-item-group>
-          <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-material-design">
-            <template v-slot:activator>
-              <v-list-item-title class="#C2CDD8--text item-menu">UX / UI</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-          </v-list-item-group>
-          <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-account-voice">
-            <template v-slot:activator>
-              <v-list-item-title class="#C2CDD8--text item-menu">Speak'up</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>CR Réunion</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-          </v-list-item-group>
-          <v-list-item-group active-class="#E7596F--text">
-          <v-list-group prepend-icon="mdi-information-outline">
-            <template v-slot:activator>
-              <v-list-item-title  class="#C2CDD8--text item-menu">Infos Pratiques</v-list-item-title>
-            </template>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon style="color: red">mdi-lightbulb-on-outline</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Trucs & Astuces</v-list-item-title>
-            </v-list-item>
-             <v-list-item link>
-            <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-
-              <v-list-item-content >
+            <v-list-group prepend-icon="mdi-head-cog">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >IA / ML</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Trucs & Astuces</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
                 <v-list-item-title>CR Réunion</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
+              </v-list-item>
+            </v-list-group>
+          </v-list-item-group>
+          <v-list-item-group active-class="#E7596F--text">
+            <v-list-group prepend-icon="mdi-dot-net">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >YPO</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Trucs & Astuces</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>CR Réunion</v-list-item-title>
+              </v-list-item>
+            </v-list-group>
+          </v-list-item-group>
+          <v-list-item-group active-class="#E7596F--text">
+            <v-list-group prepend-icon="mdi-leaf">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >Green IT</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Trucs & Astuces</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>CR Réunion</v-list-item-title>
+              </v-list-item>
+            </v-list-group>
+          </v-list-item-group>
+          <v-list-item-group active-class="#E7596F--text">
+            <v-list-group prepend-icon="mdi-material-design">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >UX / UI</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Trucs & Astuces</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>CR Réunion</v-list-item-title>
+              </v-list-item>
+            </v-list-group>
+          </v-list-item-group>
+          <v-list-item-group active-class="#E7596F--text">
+            <v-list-group prepend-icon="mdi-account-voice">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >Speak'up</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Trucs & Astuces</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>CR Réunion</v-list-item-title>
+              </v-list-item>
+            </v-list-group>
+          </v-list-item-group>
+          <v-list-item-group active-class="#E7596F--text">
+            <v-list-group prepend-icon="mdi-information-outline">
+              <template v-slot:activator>
+                <v-list-item-title class="#C2CDD8--text item-menu"
+                  >Infos Pratiques</v-list-item-title
+                >
+              </template>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon style="color: red">mdi-lightbulb-on-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Trucs & Astuces</v-list-item-title>
+              </v-list-item>
+              <v-list-item link>
+                <v-list-item-icon>
+                  <v-icon>mdi-account-group</v-icon>
+                </v-list-item-icon>
 
-          </v-list-group>
+                <v-list-item-content>
+                  <v-list-item-title>CR Réunion</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-group>
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
-      <v-content>
+      <v-main>
         <ProfilePage />
-      </v-content>
+      </v-main>
     </nav>
   </v-app>
 </template>
 
 <script>
 import ProfilePage from "./pages/ProfilePage";
+import Popup from './components/Popup.vue';
 // import MainNav from "./components/MainNav";
 // import ProfileRightNav from "./components/ProfileRightNav";
 // import HelloWorld from "./components/HelloWorld";
@@ -363,7 +405,8 @@ export default {
   name: "App",
 
   components: {
-    ProfilePage,
+    Popup,
+    ProfilePage
   },
 
   data: () => ({
@@ -457,16 +500,16 @@ export default {
 
 v-list-item-title {
   color: #fff;
-  }
+}
 
 .item-menu {
-  color: white
+  color: white;
 }
 
 i.v-icon.v-icon {
-    color: #fff;
+  color: #fff;
 }
 .hidden-sm-and-down .v-icon {
-    color: #0197bf !important;
+  color: #0197bf !important;
 }
 </style>

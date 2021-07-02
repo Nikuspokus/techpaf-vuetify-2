@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="pa-4 mt-6" app clipped floating permanent right v-model="drawer">
+  <v-navigation-drawer class="pa-4 mt-6" app clipped floating permanent right >
     <v-layout>
       <v-card height="300" width="100%">
         <v-img

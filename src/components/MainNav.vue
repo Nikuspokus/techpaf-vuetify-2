@@ -334,8 +334,5 @@ export default {
   margin-right: auto;
 }
 
-v-list-group__icon--append .v-icon {
-  color: green;
-  }
 
 </style>

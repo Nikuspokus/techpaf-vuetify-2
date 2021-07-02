@@ -8,63 +8,27 @@
       :sort-desc="sortDesc"
       hide-default-footer
     >
-      <!-- <template v-slot:header>
-        <v-toolbar dark color="blue darken-3" class="mb-1">
-          <v-text-field
-            v-model="search"
-            clearable
-            flat
-            solo-inverted
-            hide-details
-            prepend-inner-icon="mdi-magnify"
-            label="Search"
-          ></v-text-field>
-          <template v-if="$vuetify.breakpoint.mdAndUp">
-            <v-spacer></v-spacer>
-            <v-select
-              v-model="sortBy"
-              flat
-              solo-inverted
-              hide-details
-              :items="keys"
-              prepend-inner-icon="mdi-magnify"
-              label="Sort by"
-            ></v-select>
-            <v-spacer></v-spacer>
-            <v-btn-toggle v-model="sortDesc" mandatory>
-              <v-btn large depressed color="blue" :value="false">
-                <v-icon>mdi-arrow-up</v-icon>
-              </v-btn>
-              <v-btn large depressed color="blue" :value="true">
-                <v-icon>mdi-arrow-down</v-icon>
-              </v-btn>
-            </v-btn-toggle>
-          </template>
-        </v-toolbar>
-      </template> -->
-
       <template v-slot:default="props">
-        <v-row  v-for="item in props.items" :key="item.titre">
+        <v-row v-for="item in props.items" :key="item.titre">
           <div class="col-4 mx-auto">
-                <v-card elevation="12" class="mx-auto">
-                   <!-- <img :src="item.url" alt="No Image" title="Order Now" /> -->
-                  <v-img src="../assets/images/gptw.jpg"/>
-                </v-card>
-              </div>
-              <div class="col-8">
-                <h2>
-                  <strong> {{ item.titre }}</strong>
-                </h2>
-                <v-spacer></v-spacer>
-                <p class="overFlow">
-                  {{item.text}}
-                </p>
-                <v-row>
-                  <v-spacer></v-spacer>
-                <v-btn rounded right class="mt-2">sdfsdf</v-btn>
-                </v-row>
-              </div>
-          
+            <v-card elevation="12" class="mx-auto">
+              <!-- <img :src="item.url" alt="No Image" title="Order Now" /> -->
+              <v-img src="../assets/images/gptw.jpg" />
+            </v-card>
+          </div>
+          <div class="col-8">
+            <h2>
+              <strong> {{ item.titre }}</strong>
+            </h2>
+            <v-spacer></v-spacer>
+            <p class="overFlow">
+              {{ item.text }}
+            </p>
+            <v-row>
+              <v-spacer></v-spacer>
+              <v-btn rounded right class="mt-1 pa-1">Voir +</v-btn>
+            </v-row>
+          </div>
         </v-row>
       </template>
 
@@ -103,7 +67,7 @@ export default {
       keys: ["Titre", "url", "Text", "Link"],
       items: [
         {
-          titre: "1. Best Wopmopmorkplace 2021",
+          titre: "1. Best Workplace 2021",
           // src: '@assets/images/gptw.jpg',
           url: "../assets/gptw.jpg",
           text:
@@ -169,3 +133,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
